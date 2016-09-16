@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class GreenPicker extends Picker
 {
     Message msg;
+    Gumball greenGumball;
     /**
      * Act - do whatever the GreenPicker wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -29,12 +30,19 @@ public class GreenPicker extends Picker
         msg = new Message() ;
         msg.setImage(gi);
         world.addObject( msg, 676, 485) ;
+        
+        greenGumball = new GreenGumball();
+        world.addObject(greenGumball, 533, 470);
+//        greenGumball.setLocation(533, 454);
     }
     
     public void clearPickerMessage(){
         World world = getWorld() ;
         if(msg != null){
             world.removeObject(msg);
+        }
+        if(greenGumball != null){
+            world.removeObject(greenGumball);
         }
     }
 }
