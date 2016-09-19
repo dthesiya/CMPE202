@@ -91,6 +91,7 @@ void mouseClicked(){
         fill(color2);
         rect(rect2X, rect2Y, rectW, rectH, 7);
         gumballMachine.turnCrank();
+        System.out.println("Gumball machine has "+gumballMachine.getCount()+" balls left inside");
         System.out.println(gumballMachine);
     }else{
        locked1 = locked2 = false; 
