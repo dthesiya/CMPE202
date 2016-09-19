@@ -33,7 +33,6 @@ public class GreenPicker extends Picker
         
         greenGumball = new GreenGumball();
         world.addObject(greenGumball, 533, 470);
-//        greenGumball.setLocation(533, 454);
     }
     
     public void clearPickerMessage(){
