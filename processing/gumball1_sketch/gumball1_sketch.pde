@@ -1,8 +1,8 @@
 
 color color1 = 255, color2 = 255, textColor1 = 0, textColor2 = 0;
 int rect1X, rect1Y, rect2X, rect2Y, rectW = 140, rectH = 40;
-boolean intoArea1=false, locked1 = false;
-boolean intoArea2=false, locked2 = false;
+boolean intoArea1=false;
+boolean intoArea2=false;
 GumballMachine gumballMachine;
 void setup() 
 {
@@ -81,19 +81,15 @@ boolean overRect(int x, int y, int w, int h){
 
 void mouseClicked(){
     if(intoArea1){
-        locked1 = true;
         fill(color1);
         rect(rect1X, rect1Y, rectW, rectH, 7);
         gumballMachine.insertQuarter();
         System.out.println(gumballMachine);
     }else if(intoArea2){
-        locked2 = true;
         fill(color2);
         rect(rect2X, rect2Y, rectW, rectH, 7);
         gumballMachine.turnCrank();
         System.out.println("Gumball machine has "+gumballMachine.getCount()+" balls left inside");
         System.out.println(gumballMachine);
-    }else{
-       locked1 = locked2 = false; 
     }
 }
