@@ -84,6 +84,10 @@ public class GumballMachine implements IGumballMachine {
     public void setInsertedAmount(int insertedAmount) {
         this.insertedAmount = insertedAmount;
     }
+    
+    public int getGumballCountInSlot() {
+        return gumballsInSlot;
+    }
  
     int getCount() {
         return count;
